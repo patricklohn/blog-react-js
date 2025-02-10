@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Blinker";
+}
+
+:root{
+    --background-dark: #0e1217;
+    --font-dark: #fff;
+    --font-dark-2: #a9abb3;
+}
+
+body{
+    background-color: var(--background-dark);
+    color: var(--font-dark);
+}
+
+ul {
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: var(--font-dark);
+    opacity: 0.7;
+    transition: .3s;
+}
+
+a:hover{
+    opacity: 1;
+}
+
+p{
+    color: var(--font-dark-2);
+}
