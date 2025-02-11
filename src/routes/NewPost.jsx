@@ -1,9 +1,21 @@
 import React from 'react'
+import "./NewPost.css"
 
 const NewPost = () => {
   return (
-    <div>
-      <h1>new</h1>
+    <div className='new-post'>
+      <h2>Inserir novo Post:</h2>
+      <form action="">
+        <div className='form-control'>
+          <label htmlFor="title">Título:</label>
+          <input type="text" name='title' id='title' placeholder='Digite o título' />
+        </div>
+        <div className='form-control'>
+          <label htmlFor="body">Conteudo:</label>
+          <textarea name="body" id="body" placeholder='Digite o conteúdo'></textarea>
+        </div>
+        <input type="submit" value='Criar Post' className='btn'/>
+      </form>
     </div>
   )
 }
