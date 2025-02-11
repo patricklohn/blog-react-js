@@ -10,6 +10,29 @@
     --font-dark-2: #a9abb3;
 }
 
+/* Define a largura da barra de rolagem */
+::-webkit-scrollbar {
+    width: 10px; /* Para barra vertical */
+    height: 10px; /* Para barra horizontal */
+}
+
+/* Cor de fundo da área da barra de rolagem */
+::-webkit-scrollbar-track {
+    background: var(--font-dark);
+    border-radius: 2px;
+}
+
+/* Estiliza a parte que se move (thumb) */
+::-webkit-scrollbar-thumb {
+    background: var(--font-dark-2);
+    border-radius: 2px;
+}
+
+/* Muda a cor quando passa o mouse */
+::-webkit-scrollbar-thumb:hover {
+    background: var(--background-dark);
+}
+
 body{
     background-color: var(--background-dark);
     color: var(--font-dark);
