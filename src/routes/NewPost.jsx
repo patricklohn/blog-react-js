@@ -16,7 +16,7 @@ const NewPost = () => {
     const post = {title, body, userId: 1}
 
     try {
-      await blogFetch.post("/post",{
+      await blogFetch.post("/posts",{
         body: post,
       })
       navigate("/")
