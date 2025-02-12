@@ -9,7 +9,9 @@ import {createBrowserRouter, RouterProvider, Route} from 'react-router-dom';
 import Home from './routes/Home';
 import NewPost from './routes/NewPost';
 import ErrorPage from './routes/ErrorPage';
-import Posts from './routes/posts.jsx';
+import Posts from './routes/posts';
+import Admin from './routes/Admin'
+
 
 const router = createBrowserRouter([
   {
@@ -28,6 +30,10 @@ const router = createBrowserRouter([
       {
         path: "/posts/:id",
         element: <Posts/>,
+      },
+      {
+        path: "/admin",
+        element: <Admin/>,
       },
     ]
   }
