@@ -24,6 +24,13 @@ const Admin = () => {
   
     }
 
+    const deletePost = async(id) =>{
+      await blogFetch.delete(`/posts/${id}`);
+      const filteredPost = posts.filter((posts) => posts.id !== id);
+
+      setPosts(filteredPost)
+    }
+
     useEffect(() =>{
         getPosts()
     }, [])
@@ -37,11 +44,11 @@ const Admin = () => {
                         <h2>{post.title}</h2>
                         <div className="actions">
                             <Link className='btn edit-btn'>Editar</Link>
-                            <button className='btn delete-btn'>Excluir</button>
+                            <button className='btn delete-btn' onClick={() => {deletePost(post.id)}}>Excluir</button>
                         </div>
                     </div>
-                ))
-
+                )
+              )
         	)
         }
     </div>
